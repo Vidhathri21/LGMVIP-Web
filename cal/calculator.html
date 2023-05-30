@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Calucaltor app</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style2.css">
+    </head>
+<body>
+   <div class="container"><!--this  div class contains the background-->
+    <div class="calculator"><!--this div class contains the calculator-->
+        <form>
+            <div class="display"><!--this div class contains the outputscreen for results-->
+            <input type="text" placeholder="0" name="show">
+            </div>
+            <div>
+                <input type="button" value="AC" onclick="show.value = '' " class="clear but">
+                <input type="button" value="DE" onclick="show.value = show.value.toString().slice(0,-1) " class="del but">
+                <input type="button" value="." onclick="show.value += '.' " class="oper but" >
+                <input type="button" value="/" onclick="show.value += '/' " class="oper but"> 
+            </div>
+            <div>
+                <input type="button" value="7" onclick="show.value += '7' " class="but">
+                <input type="button" value="8" onclick="show.value += '8' " class="but">
+                <input type="button" value="9" onclick="show.value += '9' " class="but">
+                <input type="button" value="*" onclick="show.value += '*' " class="oper but">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="show.value += '4' " class="but">
+                <input type="button" value="5" onclick="show.value += '5' " class="but">
+                <input type="button" value="6" onclick="show.value += '6' " class="but">
+                <input type="button" value="-" onclick="show.value += '-' " class="oper but">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="show.value += '1' " class="but">
+                <input type="button" value="2" onclick="show.value += '2' " class="but">
+                <input type="button" value="3" onclick="show.value += '3' " class="but">
+                <input type="button" value="+" onclick="show.value += '+' " class="oper but">
+            </div>
+            <div>
+                <input type="button" value="00" onclick="show.value += '00' " class="but">
+                <input type="button" value="0" onclick="show.value += '0' " class="but">
+                <input type="button" value="="  onclick="show.value = eval(show.value)" class="equal oper but" >
+            </div>
+        </form>
+    </div>
+   </div>
+   <script src="script2.js"></script><!--including javascript in html-->
+</body>
+</html>
